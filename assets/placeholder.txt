@@ -1,0 +1,12 @@
+# Assets Placeholder
+
+Esta pasta contém os assets do projeto Expo.
+
+Para um projeto completo, você precisaria adicionar:
+- icon.png (1024x1024)
+- splash.png (1242x2436)
+- adaptive-icon.png (1024x1024)
+- favicon.png (48x48)
+
+Por enquanto, o app usa o logo "Instagram" em texto no header.
+
