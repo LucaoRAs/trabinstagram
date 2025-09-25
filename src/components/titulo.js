@@ -1,13 +1,18 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Platform } from 'react-native';
+import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { colors, spacing, typography } from '../theme';
+import { colors, spacing } from '../theme';
 
 export default function Titulo() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Instagram</Text>
-      
+      {/* Logo do Instagram vindo da pasta public */}
+      <Image 
+        source={{ uri: 'images/IG logo.png' }} 
+        style={styles.logo} 
+        resizeMode="contain"
+      />
+
       <View style={styles.iconsContainer}>
         <TouchableOpacity style={styles.iconButton} hitSlop={8}>
           <Ionicons name="add-outline" size={24} color={colors.primary} />
@@ -36,11 +41,9 @@ const styles = StyleSheet.create({
     borderBottomColor: colors.border,
     backgroundColor: colors.background,
   },
-  title: {
-    fontSize: 24,
-    fontWeight: '700',
-    color: colors.primary,
-    fontFamily: Platform.OS === 'ios' ? 'Helvetica Neue' : 'sans-serif-medium',
+  logo: {
+    width: 120,
+    height: 40,
   },
   iconsContainer: {
     flexDirection: 'row',
