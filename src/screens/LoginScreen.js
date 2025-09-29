@@ -8,6 +8,7 @@ import {
   SafeAreaView,
   KeyboardAvoidingView,
   Platform,
+  Image,
 } from 'react-native';
 import { colors, spacing, typography } from '../theme';
 
@@ -30,7 +31,10 @@ export default function LoginScreen({ navigation }) {
         <View style={styles.content}>
           {/* Logo */}
           <View style={styles.logoContainer}>
-            <Text style={styles.logo}>Instagram</Text>
+            <Image 
+              source={require('../assets/IG logo.png')}
+              style={{ width: 180, height: 60, resizeMode: 'contain' }}
+            />
           </View>
 
           {/* Form */}
@@ -108,12 +112,6 @@ const styles = StyleSheet.create({
   logoContainer: {
     alignItems: 'center',
     marginBottom: spacing.xxl * 2,
-  },
-  logo: {
-    fontSize: 48,
-    fontWeight: '300',
-    color: colors.primary,
-    fontFamily: Platform.OS === 'ios' ? 'Helvetica Neue' : 'sans-serif-light',
   },
   form: {
     marginBottom: spacing.xl,
@@ -193,4 +191,3 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
 });
-
