@@ -29,7 +29,7 @@ export default function LoginScreen({ navigation }) {
         style={styles.keyboardView}
       >
         <View style={styles.content}>
-          {/* Logo */}
+          {/* Logop */}
           <View style={styles.logoContainer}>
             <Image 
               source={require('../assets/IG logo.png')}
@@ -37,7 +37,7 @@ export default function LoginScreen({ navigation }) {
             />
           </View>
 
-          {/* Form */}
+          {/* Formo */}
           <View style={styles.form}>
             <TextInput
               style={styles.input}
